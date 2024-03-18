@@ -9,7 +9,7 @@ const b = 8; //Declara una constante 'b' que representa la longitud del otro lad
 const myString = `Using ${theorem}, we can work out that if the two shortest sides of a right-angled triangle have lengths of ${a} and ${b}, the length of the hypotenuse is ${Math.sqrt(a ** 2 + b ** 2)}.`;
 
 //Don't edit the code below here!
-section.innerHTML = ' '; //Editar el código, borra el contenido HTML dentro del elemento con id "section"
+const section = document.querySelector('section'); //Editar el código, borra el contenido HTML dentro del elemento con id "section"
 
 const para1 = document.createElement('p'); //Crea un nuevo elemento de párrafo (<p>).
 para1.textContent = myString; //Asigna la cadena de texto 'myString' como contenido de texto del párrafo.
