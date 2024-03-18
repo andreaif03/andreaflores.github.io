@@ -5,7 +5,7 @@ const fixedQuote = quote.charAt(0).toUpperCase() + quote.slice(1).toLowerCase().
 const finalQuote = fixedQuote + '.'; //Agrega un punto al final de la cita
 
 //Don't edit the code below here!
-section.innerHTML = ' '; //Editar el código, borra el contenido HTML dentro del elemento con id "section"
+const section = document.querySelector('section'); //Editar el código, borra el contenido HTML dentro del elemento con id "section"
 
 const para1 = document.createElement('p'); //Creación de un elemento de párrafo para mostrar la cita corregida
 para1.textContent = fixedQuote; //Asigna la cita corregida al elemento de párrafo
