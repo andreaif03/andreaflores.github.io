@@ -4,7 +4,7 @@ let myName = "Andrea"; //Declara una variable llamada myName y la inicializa con
 let myAge = 20; //Declara una variable llamada myAge y la inicializa con un valor en la misma línea
 
 //Don't edit the code below here!
-section.innerHTML = ' '; //Editar el código, borra el contenido HTML dentro del elemento con id "section"
+const section = document.querySelector('section'); //Editar el código, borra el contenido HTML dentro del elemento con id "section"
 
 const para1 = document.createElement('p'); //Crea un nuevo elemento de párrafo (<p>)
 para1.textContent = myName; //Establece su contenido de texto como el valor de myName
