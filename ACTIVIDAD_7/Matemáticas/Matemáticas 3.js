@@ -17,7 +17,7 @@ const heightComparison = ostrichHeight > duckHeight; //Prueba si la altura del a
 const pwdMatch = pwd1.toLowerCase() === pwd2.toLowerCase(); //Prueba si las dos contraseñas coinciden (ignorando mayúsculas y minúsculas)
 
 //Don't edit the code below here!
-section.innerHTML = ' '; //Editar el código, borra el contenido HTML dentro del elemento con id "section"
+const section = document.querySelector('section'); //Editar el código, borra el contenido HTML dentro del elemento con id "section"
 
 const para1 = document.createElement('p'); //Crea un nuevo párrafo para mostrar el resultado de la primer prueba
 const para2 = document.createElement('p'); //Crea un nuevo párrafo para mostrar el resultado de la segunda prueba
