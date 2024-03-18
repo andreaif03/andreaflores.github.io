@@ -14,7 +14,7 @@ finalResult = sum * difference; //Multiplicación de los resultados secundarios 
 evenOddResult = finalResult % 2 === 0 ? 0 : 1; //Verificación si finalResult es un número par y almacenamiento del resultado en una variable llamada evenOddResult
 
 //Don't edit the code below here!
-section.innerHTML = ' '; //Editar el código, borra el contenido HTML dentro del elemento con id "section"
+const section = document.querySelector('section'); //Editar el código, borra el contenido HTML dentro del elemento con id "section"
 
 const para1 = document.createElement('p'); //Crea un nuevo elemento de párrafo (<p>)
 const finalResultCheck = finalResult === 48 ? `Yes, well done!` : `No, it is ${ finalResult }`; //Creación de una variable finalResultCheck que contiene un mensaje de éxito si finalResult es igual a 48, de lo contrario, contiene un mensaje que indica el valor real de finalResult
