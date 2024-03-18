@@ -12,7 +12,7 @@ typeof(finalResult); //Verifica el tipo de dato de finalResult y devuelve una ca
 let finalNumber = Number(finalResult); //Conversión de finalResult a tipo number y almacenamiento en la variable finalNumber
 
 //Don't edit the code below here!
-section.innerHTML = ' '; //Editar el código, borra el contenido HTML dentro del elemento con id "section"
+const section = document.querySelector('section'); //Editar el código, borra el contenido HTML dentro del elemento con id "section"
 
 const para1 = document.createElement('p'); //Crea un nuevo elemento de párrafo (<p>)
 para1.textContent = `Your finalResult is ${ finalResult }`; //Establece el contenido de texto del primer párrafo para mostrar el resultado final
