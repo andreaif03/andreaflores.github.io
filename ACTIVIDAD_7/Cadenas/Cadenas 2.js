@@ -10,7 +10,7 @@ const index = quote.indexOf(substring); //Buscar la posición del índice donde 
 const revisedQuote = quote.slice(0, index) + 'No me gustan los huevos verdes y el jamón' + quote.slice(index + substring.length); 
 
 //Don't edit the code below here!
-section.innerHTML = ' '; //Editar el código, borra el contenido HTML dentro del elemento con id "section"
+const section = document.querySelector('section'); //Editar el código, borra el contenido HTML dentro del elemento con id "section"
 
 const para1 = document.createElement('p'); //Creación de un elemento de párrafo para mostrar la longitud de la cita original
 para1.textContent = `The quote is ${ quoteLength } characters long.`; //Asigna el texto con la longitud de la cita al elemento de párrafo
