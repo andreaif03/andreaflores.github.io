@@ -2,7 +2,7 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8"/>
-    <title>OOJS: Task 1</title>
+    <title>OOJS: Task 2</title>
     <style>
       p {
         color: purple;
@@ -43,10 +43,19 @@
       }
     }
 
-    const square = new Shape('square', 4, 5);
-    square.calcPerimeter();
+    class Square extends Shape {
+      constructor(sideLength) {
+        super('square', 4, sideLength);
+      }
 
-    const triangle = new Shape('triangle', 3, 3);
-    triangle.calcPerimeter();
+      calcArea() {
+        const area = this.sideLength ** 2;
+        console.log(`Area of ${this.name}: ${area}`);
+      }
+    }
+
+    const square = new Square(5);
+    square.calcPerimeter();
+    square.calcArea();
   </script>
 </html>
