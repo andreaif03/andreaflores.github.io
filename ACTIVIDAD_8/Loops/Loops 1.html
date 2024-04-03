@@ -28,16 +28,24 @@
 
   </body>
   <script>
+    //Array que contiene una lista de elementos
     const myArray = ['tomatoes', 'chick peas', 'onions', 'rice', 'black beans'];
+    //Crea un nuevo elemento de lista no ordenada (<ul>) en el documento HTML
     const list = document.createElement('ul');
 
+    //Bucle for que recorre el array 'myArray'
     for (let i = 0; i < myArray.length; i++) {
+      //Crea un nuevo elemento de lista (<li>) para cada elemento del array
       const listItem = document.createElement('li');
+      //Establece el contenido de texto del elemento de lista con el elemento correspondiente del array 'myArray'
       listItem.textContent = myArray[i];
+      //Agrega el elemento de lista como hijo del elemento de lista no ordenada
       list.appendChild(listItem);
     }
 
+    //Selecciona el primer elemento de tipo 'section' en el documento HTML
     const section = document.querySelector('section');
+    //Agrega la lista creada como hijo del elemento 'section'
     section.appendChild(list);
   </script>
 </html>
