@@ -28,18 +28,24 @@
 
   </body>
   <script>
+    //Array que contiene una lista de nombres
     const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada'];
+    //Crea un nuevo elemento de párrafo en el documento HTML
     const para = document.createElement('p');
 
+    //Función de flecha que devuelve true si la longitud del nombre es menor que 5, de lo contrario devuelve false
     const isShort = name => name.length < 5;
 
+    //Filtra los nombres del array 'names' utilizando la función 'isShort', dejando solo los nombres con longitud menor que 5
     const shortNames = names.filter(isShort);
+    //Establece el contenido de texto del párrafo creado con los nombres cortos obtenidos después de aplicar el filtro
     para.textContent = shortNames;
 
     // Don't edit the code below here!
-
+    //Selecciona el primer elemento de tipo 'section' en el documento HTML
     const section = document.querySelector('section');
 
+    //Agrega el párrafo creado con los nombres cortos como hijo del elemento 'section'
     section.appendChild(para);
   </script>
 
