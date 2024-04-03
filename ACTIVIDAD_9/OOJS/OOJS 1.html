@@ -1,3 +1,5 @@
+//OOJS 1
+
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
@@ -26,27 +28,37 @@
 
   </body>
   <script>
+    //Define una clase llamada 'Shape'
     class Shape {
+      //Declara propiedades con valores predeterminados para 'name', 'sides' y 'sideLength'
       name = '';
       sides = 0;
       sideLength = 0;
 
+      //Constructor de la clase 'Shape' que inicializa las propiedades con los valores proporcionados
       constructor(name, sides, sideLength) {
-        this.name = name;
-        this.sides = sides;
-        this.sideLength = sideLength;
+        this.name = name; //Inicializa la propiedad 'name' con el valor proporcionado
+        this.sides = sides; //Inicializa la propiedad 'sides' con el valor proporcionado
+        this.sideLength = sideLength; //Inicializa la propiedad 'sideLength' con el valor proporcionado
       }
 
+      //Método 'calcPerimeter()' de la clase 'Shape' que calcula y muestra el perímetro de la forma
       calcPerimeter() {
+        //Calcula el perímetro de la forma multiplicando el número de lados por la longitud de un lado
         const perimeter = this.sides * this.sideLength;
+        //Muestra un mensaje en la consola con el nombre de la forma y su perímetro
         console.log(`Perimeter of ${this.name}: ${perimeter}`);
       }
     }
 
+    //Crea una nueva instancia de la clase 'Shape' llamada 'square' con nombre 'square', 4 lados y longitud de lado 5
     const square = new Shape('square', 4, 5);
+    //Llama al método 'calcPerimeter()' en la instancia 'square' para calcular y mostrar su perímetro
     square.calcPerimeter();
 
+    //Crea una nueva instancia de la clase 'Shape' llamada 'triangle' con nombre 'triangle', 3 lados y longitud de lado 3
     const triangle = new Shape('triangle', 3, 3);
+    //Llama al método 'calcPerimeter()' en la instancia 'triangle' para calcular y mostrar su perímetro
     triangle.calcPerimeter();
   </script>
 </html>
