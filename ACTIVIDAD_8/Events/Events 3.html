@@ -40,17 +40,19 @@
     </div>
 
   <script>
-
+  //Selecciona el primer elemento del documento HTML que tenga la clase 'button-bar'
   const buttonBar = document.querySelector('.button-bar');
 
-  // Add your code here
+  //Agrega un evento de escucha al elemento buttonBar que se activa cuando se hace clic en algún elemento hijo
   buttonBar.addEventListener('click', function(event) {
+    //Verifica si el elemento que desencadenó el evento de clic es un botón
     if (event.target.tagName === 'BUTTON') {
+      //Obtiene el valor del atributo 'data-color' del botón que se hizo clic
       const color = event.target.getAttribute('data-color');
+      //Establece el color de fondo de buttonBar al valor del atributo 'data-color' del botón que se hizo clic
       buttonBar.style.backgroundColor = color;
     }
   });
-
   </script>
   </body>
 </html>
