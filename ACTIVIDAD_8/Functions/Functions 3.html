@@ -28,23 +28,32 @@
 
   </body>
   <script>
+    //Array que contiene una lista de nombres
     const names = ['Chris', 'Li Kang', 'Anne', 'Francesca', 'Mustafa', 'Tina', 'Bert', 'Jada']
+    //Crea un nuevo elemento de párrafo en el documento HTML
     const para = document.createElement('p');
 
+    //Función que genera un número entero aleatorio en un rango dado (min, max)
     function random(min, max) {
       return Math.floor(Math.random() * (max - min + 1)) + min;
     }
 
+    //Función que elige un nombre aleatorio de un array dado
     function chooseName(arr) {
+      //Genera un índice aleatorio dentro del rango de índices del array
       const index = random(0, arr.length - 1);
+      //Devuelve el nombre correspondiente al índice aleatorio generado
       return arr[index];
     }
 
+    //Llama a la función chooseName para elegir un nombre aleatorio del array 'names'
     const chosenName = chooseName(names);
+    //Establece el contenido de texto del párrafo creado con el nombre aleatorio elegido
     para.textContent = chosenName;
 
+    //Selecciona el primer elemento de tipo 'section' en el documento HTML
     const section = document.querySelector('section');
+    //Agrega el párrafo creado con el nombre aleatorio como hijo del elemento 'section'
     section.appendChild(para);
   </script>
-
 </html>
