@@ -34,24 +34,31 @@
 
   </body>
   <script>
+    //Selecciona el elemento canvas del documento HTML
     const canvas = document.querySelector('canvas');
+    //Obtiene el contexto de representación 2D del canvas
     const ctx = canvas.getContext('2d');
 
+    //Define las coordenadas x e y de la esquina superior izquierda del rectángulo
     const x = 50;
     const y = 60;
+    //Define el ancho y el alto del rectángulo
     const width = 100;
     const height = 75;
+    //Define el color del rectángulo
     const color = 'blue';
 
+    //Función para dibujar un rectángulo en el canvas con las especificaciones dadas
     function drawRectangle(x, y, width, height, color) {
-      // Clear the canvas
+      //Limpia el canvas, borrando cualquier dibujo previo
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Draw the rectangle
-      ctx.fillStyle = color;
-      ctx.fillRect(x, y, width, height);
+      //Dibuja el rectángulo en el canvas
+      ctx.fillStyle = color; // Establece el color de relleno del rectángulo
+      ctx.fillRect(x, y, width, height); // Dibuja el rectángulo en las coordenadas dadas con el ancho y alto especificados
     }
 
+    //Llama a la función drawRectangle para dibujar un rectángulo en el canvas con las coordenadas, tamaño y color especificados
     drawRectangle(x, y, width, height, color);
   </script>
 </html>
