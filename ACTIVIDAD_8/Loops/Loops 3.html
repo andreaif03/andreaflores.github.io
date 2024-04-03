@@ -28,27 +28,40 @@
 
   </body>
   <script>
+    //Inicializa la variable 'i' con el valor 500
     let i = 500;
+    //Crea un nuevo elemento de párrafo (<p>) en el documento HTML
     const para = document.createElement('p');
 
+    //Función que verifica si un número es primo
     function isPrime(num) {
+      //Bucle for que itera desde 2 hasta un número antes que 'num'
       for(let i = 2; i < num; i++) {
+        //Verifica si 'num' es divisible por 'i'
         if(num % i === 0) {
+          //Si 'num' es divisible por 'i', devuelve falso (no es primo)
           return false;
         }
       }
 
+      //Si 'num' no es divisible por ningún número entre 2 y 'num' - 1, devuelve verdadero (es primo)
       return true;
     }
 
+    //Bucle while que se ejecuta mientras 'i' sea mayor o igual a 2
     while (i >= 2) {
+      //Verifica si el número actual 'i' es primo utilizando la función 'isPrime'
       if (isPrime(i)) {
+        //Si 'i' es primo, agrega el número al contenido de texto del párrafo con una coma y un espacio
         para.textContent += `${i}, `;
       }
+      //Decrementa 'i' en 1 para verificar el siguiente número en la siguiente iteración del bucle
       i--;
     }
 
+    //Selecciona el primer elemento de tipo 'section' en el documento HTML
     const section = document.querySelector('section');
+    //Agrega el párrafo creado con los números primos como hijo del elemento 'section'
     section.appendChild(para);
   </script>
 </html>
