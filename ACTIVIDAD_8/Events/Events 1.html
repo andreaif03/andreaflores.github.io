@@ -31,20 +31,24 @@
     <button class="off">Machine is off</button>
 
   <script>
+    //Selecciona el primer elemento del documento HTML que tenga la clase 'off'
     const btn = document.querySelector('.off');
 
-    // Add your code here
+    //Variable para almacenar el estado de la máquina (encendida o apagada), inicialmente apagada (false)
     let isMachineOn = false;
 
+    //Agrega un evento de escucha al botón seleccionado que se ejecutará cuando se haga clic en él
     btn.addEventListener('click', function() {
       if (isMachineOn) {
+        //Si la máquina está encendida, cambia el texto del botón a 'Machine is off'
         btn.textContent = 'Machine is off';
       } else {
+        //Si la máquina está apagada, cambia el texto del botón a 'Machine is on'
         btn.textContent = 'Machine is on';
       }
+      //Invierte el estado de la máquina (si está encendida, la apaga; si está apagada, la enciende)
       isMachineOn = !isMachineOn;
     });
   </script>
-
   </body>
 </html>
