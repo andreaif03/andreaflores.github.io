@@ -28,9 +28,12 @@
 
   </body>
   <script>
+    //Define una variable 'name' y le asigna el valor 'Mustafa'
     const name = 'Mustafa';
+    //Crea un nuevo elemento de párrafo (<p>) en el documento HTML
     const para = document.createElement('p');
 
+    //Array de objetos que representa un directorio telefónico, donde cada objeto tiene propiedades 'name' (nombre) y 'number' (número)
     const phonebook = [
       { name : 'Chris', number : '1549' },
       { name : 'Li Kang', number : '9634' },
@@ -42,14 +45,20 @@
       { name : 'Jada', number : '2282' },
     ]
 
+    //Bucle for...of que recorre cada entrada en el array 'phonebook'
     for (const entry of phonebook) {
+      //Verifica si el nombre de la entrada actual coincide con el nombre almacenado en la variable 'name'
       if (entry.name === name) {
+        //Si se encuentra una coincidencia, establece el contenido de texto del párrafo con el nombre y número de teléfono correspondientes
         para.textContent = `${entry.name}'s phone number is ${entry.number}`;
+        //Termina el bucle después de encontrar la primera coincidencia
         break;
       }
     }
 
+    //Selecciona el primer elemento de tipo 'section' en el documento HTML
     const section = document.querySelector('section');
+    //Agrega el párrafo creado con la información del nombre y número de teléfono como hijo del elemento 'section'
     section.appendChild(para);
   </script>
 </html>
