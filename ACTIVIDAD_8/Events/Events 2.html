@@ -32,46 +32,62 @@
     </canvas>
 
   <script>
+    //Selecciona el elemento canvas del documento HTML
     const canvas = document.querySelector('canvas');
+    //Obtiene el contexto de representación 2D del canvas
     const ctx = canvas.getContext('2d');
 
+    //Función para dibujar un círculo en el canvas en la posición (x, y) con el tamaño especificado
     function drawCircle(x, y, size) {
-      ctx.fillStyle = 'white';
+      //Llena el canvas con un rectángulo blanco para borrar cualquier círculo previo      ctx.fillStyle = 'white';
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
+      //Empieza un nuevo trazo
       ctx.beginPath();
+      //Establece el color de relleno del círculo en negro
       ctx.fillStyle = 'black';
+      //Dibuja un arco (círculo) en la posición (x, y) con el radio 'size', empezando desde el ángulo 0 y terminando en 2 * Math.PI (360 grados)
       ctx.arc(x, y, size, 0, 2 * Math.PI);
+      //Rellena el círculo con el color especificado
       ctx.fill();
     }
 
+    //Posición inicial del círculo
     let x = 50;
     let y = 50;
+    //Tamaño del círculo
     const size = 30;
 
+    //Dibuja un círculo en la posición inicial
     drawCircle(x, y, size);
 
-    // Add your code here
-    const stepSize = 10; // Tamaño del paso para mover el círculo
+    //Tamaño del paso para mover el círculo
+    const stepSize = 10;
 
+    //Agrega un evento de escucha para detectar cuando se presiona una tecla
     window.addEventListener('keydown', function(event) {
+      //Evalúa qué tecla se ha presionado
       switch(event.key) {
         case 'w':
+          //Si se presiona la tecla 'w', mueve el círculo hacia arriba restando 'stepSize' a la coordenada y
           y -= stepSize; // Mover hacia arriba
           break;
         case 'a':
+          //Si se presiona la tecla 'a', mueve el círculo hacia la izquierda restando 'stepSize' a la coordenada x
           x -= stepSize; // Mover hacia la izquierda
           break;
         case 's':
+          //Si se presiona la tecla 's', mueve el círculo hacia abajo sumando 'stepSize' a la coordenada y
           y += stepSize; // Mover hacia abajo
           break;
         case 'd':
+          //Si se presiona la tecla 'd', mueve el círculo hacia la derecha sumando 'stepSize' a la coordenada x
           x += stepSize; // Mover hacia la derecha
           break;
       }
-      drawCircle(x, y, size); // Volver a dibujar el círculo en la nueva posición
+      //Después de mover el círculo, dibuja el círculo en la nueva posición
+      drawCircle(x, y, size);
     });
   </script>
   </body>
-  
 </html>
